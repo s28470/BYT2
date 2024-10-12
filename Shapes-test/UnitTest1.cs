@@ -2,9 +2,17 @@ using Tut2_s20123;
 
 namespace Tut2_s20123_Tests
 {
+    [TestFixture]
     public class Tests
     {
-        private readonly IShape sphere = new Sphere(5);
+        private IShape sphere;
+
+        
+        [SetUp]
+        public void SetUp()
+        {
+            sphere = new Sphere(5);
+        }
 
         [Test]
         public void TestSphereCalculateArea()
