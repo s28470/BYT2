@@ -86,6 +86,25 @@ namespace Calculator
                         Math.Pow(999999, 9999999999999999), "+");
             }));
         }
+
+
+        [Test]
+        public void TestIntegerCalculator()
+        {
+            Assert.DoesNotThrow((() => _calculator = new Calculator(1,1, "+")));
+        }
+
+        [Test]
+        public void TestDoubleCalculator()
+        {
+            Assert.DoesNotThrow((() => _calculator = new Calculator(1.1, 1.2, "-")));
+        }
+
+        [Test]
+        public void TestStringCalculator()
+        {
+            Assert.DoesNotThrow(()=> _calculator = new Calculator("123", "343", "+"));
+        }
         
         
         
