@@ -38,5 +38,38 @@ namespace Calculator
             }
             this.operation = operation;
         }
+
+        public decimal Calculate()
+        {
+            dynamic result;
+            switch (operation)
+            {
+                case "+":
+                    result = a + b;
+                    break;
+                case "-":
+                    result = a - b;
+                    break;
+                case "*":
+                    result = a * b;
+                    break;
+                case "/":
+                    if (b != 0)
+                    {
+                        result = a / b;
+                    }
+                    else
+                    {
+                        throw new DivideByZeroException();
+                    }
+                    break;
+                
+                default:
+                    Console.WriteLine("No operation");
+                    throw new ArgumentException();
+            }
+
+            return result;
+        }
     }    
 }
