@@ -8,11 +8,19 @@ namespace Calculator
 
         private string operation;
 
+        // I want the calculator to be able to be created from any numeric data and strings
         public Calculator(dynamic a, dynamic b, string operation)
         {
 
             try
             {
+                if (a is null || b is null)
+                {
+                    throw new ArgumentNullException();
+                }
+                {
+                    
+                }
                 this.a = Convert.ToDecimal(a);
                 this.b = Convert.ToDecimal(b);
             }
