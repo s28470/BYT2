@@ -25,4 +25,5 @@ public class CubeTest
     {
         Assert.That(cube.CalculateVolume(), Is.EqualTo(64));
     }
+    
 }
