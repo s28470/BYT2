@@ -105,9 +105,9 @@ namespace Calculator
         {
             Assert.DoesNotThrow(()=> _calculator = new Calculator("123", "343", "+"));
         }
-        
-        
-        
+
+
+
         
     }
 }
